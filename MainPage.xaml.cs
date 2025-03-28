@@ -34,7 +34,6 @@ namespace PickRandomCardsMAUI
                 // PickedCards.Text = "Please enter a valid number";
                 DisplayAlert("Invalid input", "Sorry, use a number from 1 to 52", "OK");
                 return;
-
             }
         }
 
