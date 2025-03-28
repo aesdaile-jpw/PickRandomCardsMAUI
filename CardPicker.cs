@@ -6,6 +6,9 @@ class CardPicker
     {
         string[] pickedCards = new string[numberOfCards];
 
+        string[] cardDeck = new string[52];
+
+
         for (int i = 0;  i < numberOfCards; i++)
         {
             pickedCards[i] = RandomValue() + " of " + RandomSuit();
@@ -33,5 +36,6 @@ class CardPicker
         return value.ToString();
     }
 
+   
 
 }

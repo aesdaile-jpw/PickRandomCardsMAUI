@@ -32,7 +32,7 @@ namespace PickRandomCardsMAUI
 
         private void NumberOfCards_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+           
         }
     }
 
