@@ -6,12 +6,24 @@ class CardPicker
     {
         string[] pickedCards = new string[numberOfCards];
 
-        string[] cardDeck = new string[52];
+        List<string> cardDeck = new List<string>();
+        string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
+        string[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
 
+        foreach (string suit in suits)
+        {
+            foreach (string rank in ranks)
+            {
+                cardDeck.Add(rank + " of " + suit);
+            }
+        }
 
         for (int i = 0;  i < numberOfCards; i++)
         {
-            pickedCards[i] = RandomValue() + " of " + RandomSuit();
+            // pickedCards[i] = RandomValue() + " of " + RandomSuit();
+            int value = Random.Shared.Next(cardDeck.Count);
+            pickedCards[i] = cardDeck[value];
+            cardDeck.RemoveAt(value);
         }
         return pickedCards;
     }

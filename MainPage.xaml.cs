@@ -15,6 +15,11 @@ namespace PickRandomCardsMAUI
         {
             if (int.TryParse(NumberOfCards.Text, out int numberOfCards))
             {
+                if (numberOfCards > 52)
+                {
+                    DisplayAlert("Too many cards", "Sorry, please pick 10 cards or fewer", "OK");
+                    return;
+                }
                 string[] cards = CardPicker.PickSomeCards(numberOfCards);
                 PickedCards.Text = String.Empty;
                 foreach (string card in cards)
@@ -26,7 +31,10 @@ namespace PickRandomCardsMAUI
             }
             else
             {
-                PickedCards.Text = "Please enter a valid number";
+                // PickedCards.Text = "Please enter a valid number";
+                DisplayAlert("Invalid input", "Sorry, use a number from 1 to 52", "OK");
+                return;
+
             }
         }
 
