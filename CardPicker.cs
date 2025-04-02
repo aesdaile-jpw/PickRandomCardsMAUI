@@ -2,10 +2,14 @@
 
 class CardPicker
 {
+    /// <summary>
+    /// Picks a number of cards from a deck
+    /// </summary>
+    /// <param name="numberOfCards"></param>
+    /// <returns></returns>
     public static string[] PickSomeCards(int numberOfCards)
     {
         string[] pickedCards = new string[numberOfCards];
-
         List<string> cardDeck = new List<string>();
         string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
         string[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
@@ -27,7 +31,10 @@ class CardPicker
         }
         return pickedCards;
     }
-
+    /// <summary>
+    /// Returns a random suit
+    /// </summary>
+    /// <returns></returns>
     private static string RandomSuit()
     {
         int value = Random.Shared.Next(1, 5);   // pick a random number from 1 to 4
@@ -37,7 +44,10 @@ class CardPicker
         return "Diamonds";
     }
 
-
+    /// <summary>
+    /// Returns a random value
+    /// </summary>
+    /// <returns></returns>
     private static string RandomValue()
     {
         int value = Random.Shared.Next(1, 14);  // pick a random number from 1 to 13
