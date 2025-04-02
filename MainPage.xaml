@@ -10,7 +10,7 @@
 
             <Label Text="How many cards to pick?" FontSize="18"  SemanticProperties.Description="How many cards to pick" HorizontalOptions="Center"/>
 
-            <Entry x:Name="NumberOfCards" Placeholder="Enter the number of cards to pick" SemanticProperties.Hint="Enter number of cards to pick" HorizontalOptions="FillAndExpand" TextChanged="NumberOfCards_TextChanged"/>
+            <Entry x:Name="NumberOfCards" Placeholder="Enter the number of cards to pick" SemanticProperties.Hint="Enter number of cards to pick" HorizontalOptions="Center" TextChanged="NumberOfCards_TextChanged"/>
 
             <Button x:Name="PickCardsButton" Text="Pick Some Cards!" SemanticProperties.Hint="Click to pick cards" HorizontalOptions="Center" Clicked="PickCardsButton_Clicked"/>
 
